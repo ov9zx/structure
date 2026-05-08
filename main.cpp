@@ -30,7 +30,9 @@ coustmer input_customer() {
 }
 
 int main() {
-    // Твой хардкод (оставляем по просьбе)
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+   
     coustmer c1 = {"Ivanov I.I.", "Moscow, Lenina 1", 10};
     coustmer c2 = {"Ivanov I.I.", "Moscow, Lenina 1", 10};
     coustmer c3 = {"Ivanov I.I.", "Moscow, Lenina 1", 10};
@@ -40,7 +42,7 @@ int main() {
     coustmers.push_back(c2);
     coustmers.push_back(c3);
 
-    // Ввод количества через sstream
+   
     int n = 0;
     cout << "Сколько клиентов вы хотите добавить? ";
     string temp_n;
@@ -52,7 +54,7 @@ int main() {
         coustmers.push_back(input_customer());
     }
 
-    // Логика уникальности
+    
     vector<coustmer> unique_customers;
     for (const auto& c : coustmers) {
         bool exists = false;
@@ -67,7 +69,7 @@ int main() {
         }
     }
 
-    // Вывод результата
+   
     cout << "\n--- Список уникальных клиентов ---\n";
     for (const auto& c : unique_customers) {
         cout << c.sureName << " , " << c.adress << " ,Скидка: " << c.discount << "%" << endl;
