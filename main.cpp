@@ -292,7 +292,7 @@ int main() {
     cout << "\nВведите диапазон зарплаты (от и до): ";
     cin >> minSalary >> maxSalary;
 
-    cout << "\n--- Результаты (б): Зарплата من " << minSalary << " إلى " << maxSalary << " ---" << endl;
+    cout << "\n--- Результаты (б): Зарплата  " << minSalary  << maxSalary << " ---" << endl;
     for (int i = 0; i < workers.size(); i++) {
         if (workers[i].salary >= minSalary && workers[i].salary <= maxSalary) {
             workers[i].show();
